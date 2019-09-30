@@ -34,12 +34,12 @@ export default {
     pdf
   },
   created() {
-    console.log(CNNumber(123.2));
-    console.log(type(123.2));
-    console.log(type.isNumber(123.2));
-    let obj = {};
-    obj.a = obj;
-    console.log(deepCopy(obj));
+    // console.log(CNNumber(123.2));
+    // console.log(type(123.2));
+    // console.log(type.isNumber(123.2));
+    // let obj = {};
+    // obj.a = obj;
+    // console.log(deepCopy(obj));
   },
   mounted() {},
   methods: {
