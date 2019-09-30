@@ -27,6 +27,7 @@ module.exports = {
   lintOnSave: true,
   //将接收ChainableConfig由webpack-chain提供支持的实例的函数。允许对内部webpack配置进行更细粒度的修改
   chainWebpack: (config) => {
+    config.resolve.symlinks(true);
     config.resolve.alias
       .set('assets', path.join(__dirname, 'src/assets'))
       .set('components', path.join(__dirname, 'src/components'))

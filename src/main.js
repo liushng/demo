@@ -3,11 +3,11 @@ import App from './App.vue';
 import router from './router/';
 import store from './store/';
 import axios from './axios/';
-
 Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
 
 import 'assets/scss/reset.scss';
+import './util/filters';
 
 if (process.env.VUE_APP_VCONSOLE == 'show') {
   import("vconsole/dist/vconsole.min").then(Module => {
