@@ -1,3 +1,7 @@
+import createPersistedState from 'vuex-persistedstate'
+import {
+  vuexLsPersistent
+} from "../util/publicMethods"
 export default new Vuex.Store({
   state: {
 
@@ -7,5 +11,8 @@ export default new Vuex.Store({
   },
   actions: {
 
-  }
+  },
+  plugins: [createPersistedState({
+    paths: ['userInfo.userInfo']
+  }), vuexLsPersistent]
 })

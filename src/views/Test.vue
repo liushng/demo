@@ -1,15 +1,20 @@
 <template>
-  <div class="about">111</div>
+  <div class="test">
+    <pdf></pdf>
+  </div>
 </template>
 <script>
+import pdf from "@/components/PDF";
 export default {
-  name: "",
+  name: "test",
   data() {
     return {};
   },
   props: {},
   computed: {},
-  components: {},
+  components: {
+    pdf
+  },
   created() {},
   mounted() {},
   methods: {},
@@ -18,8 +23,4 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.about {
-  color: red;
-  font-size: 15px;
-}
 </style>

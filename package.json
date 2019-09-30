@@ -14,12 +14,14 @@
     "babel-polyfill": "^6.26.0",
     "compression-webpack-plugin": "^3.0.0",
     "core-js": "^2.6.5",
+    "localforage": "^1.7.3",
     "postcss-px-to-viewport": "^1.1.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vconsole": "^3.3.4",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",

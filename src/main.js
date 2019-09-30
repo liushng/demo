@@ -7,6 +7,8 @@ import axios from './axios/';
 Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
 
+import 'assets/scss/reset.scss';
+
 if (process.env.VUE_APP_VCONSOLE == 'show') {
   import("vconsole/dist/vconsole.min").then(Module => {
     new Module.default();
