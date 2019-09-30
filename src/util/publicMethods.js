@@ -13,19 +13,8 @@ export const log = (...arg) => {
   }
 }
 import localforage from "localforage"
-// vuex持久化低配版
-// export function vuexLsPersistent(store) {
-//   localforage.getItem('vuex').then(res => {
-//     if (res && typeof res == 'object') {
-//       store.replaceState(res);
-//     }
-//   });
-//   store.subscribe((mutation, state) => {
-//     localforage.setItem('vuex', state).then(res => {});
-//   })
-// }
 /**
- * vuex持久化升级版
+ * vuex持久化
  * @export 
  * @param {*} param
  * @returns
@@ -35,9 +24,7 @@ export function vuexLsPersistent(param) {
   return function (store) {
     localforage.getItem(param.keyName).then(res => {
       if (res && typeof res == 'object') {
-        // 合并数据（其他状态保持的和未保持的）
-        let obj = Object.assign(store.state, res);
-        store.replaceState(obj);
+        store.replaceState(Object.assign(store.state, res));
       }
     });
     store.subscribe((mutation, state) => {
@@ -358,5 +345,4 @@ export function deepCopy(jsonObj) {
     visited[first.key] = first.value;
   }
   return copy;
-
 }
